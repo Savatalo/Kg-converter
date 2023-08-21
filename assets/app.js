@@ -1,13 +1,12 @@
 const usrInp = document.getElementById("inp");
-const cnvtBtn = document.getElementById("convertBtn");
 const para = document.getElementById("para");
 let convertedValue;
 
-cnvtBtn.addEventListener("click", () => {
+usrInp.addEventListener('input', () => {
   convertedValue = usrInp.value * 2.20462262185;
-  para.innerHTML = convertedValue;
+  para.innerHTML = convertedValue + ` ibs`;
 
-  if (usrInp.value <= 0) {
+  if (usrInp.value < 0) {
     para.innerHTML = "YOU ARE RETARD :)";
-  }
-});
+  } 
+})
